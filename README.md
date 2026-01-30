@@ -23,14 +23,10 @@ The analysis is organized as a stepwise pipeline. Each SQL file represents a dis
 ### 1. Define Colchicine Cohort
 **File:** `01_define_colchicine_cohort.sql`
 
-### 1. Define Colchicine Cohort
-**File:** `01_define_colchicine_cohort.sql`
-
 - Identifies adult participants randomized to the colchicine arm
 - Confirms active colchicine exposure using medication records
 - Establishes a clear index date based on randomization
 - Produces a clean, participant-level cohort for downstream analyses
-
 
 ---
 
@@ -46,9 +42,11 @@ The analysis is organized as a stepwise pipeline. Each SQL file represents a dis
 ### 3. Flag Drug–Drug Interactions
 **File:** `03_flag_drug_drug_interactions.sql`
 
-- Applies rule-based DDI classification
-- Demonstrates how interaction status can be operationalized
-- Separates interaction logic from outcome modeling
+- Compares baseline medications against a curated drug–drug interaction reference list
+- Identifies participants with at least one medication known to interact with colchicine
+- Generates a binary participant-level indicator for colchicine drug–drug interaction status
+- Preserves participants without interactions to avoid cohort attrition
+
 
 ---
 
