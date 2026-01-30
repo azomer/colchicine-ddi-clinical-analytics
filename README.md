@@ -23,19 +23,23 @@ The analysis is organized as a stepwise pipeline. Each SQL file represents a dis
 ### 1. Define Colchicine Cohort
 **File:** `01_define_colchicine_cohort.sql`
 
-- Identifies adult participants with active colchicine exposure
-- Establishes baseline eligibility criteria
-- Defines an index exposure date
-- Ensures consistent population definition for downstream analyses
+### 1. Define Colchicine Cohort
+**File:** `01_define_colchicine_cohort.sql`
+
+- Identifies adult participants randomized to the colchicine arm
+- Confirms active colchicine exposure using medication records
+- Establishes a clear index date based on randomization
+- Produces a clean, participant-level cohort for downstream analyses
+
 
 ---
 
 ### 2. Identify Concomitant Medications
 **File:** `02_identify_concomitant_medications.sql`
 
-- Identifies baseline medications overlapping with colchicine exposure
-- Establishes temporal overlap logic
-- Prepares medication lists for interaction classification
+- Identifies baseline medications overlapping with the colchicine index date
+- Applies temporal logic to capture ongoing and recently initiated therapies
+- Produces a participant-level medication list for DDI classification
 
 ---
 
