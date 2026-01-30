@@ -45,3 +45,8 @@ SELECT
     participant_id,
     index_date
 FROM confirmed_colchicine_exposure;
+
+
+
+-- Output shape:
+-- participant_id | index_date
