@@ -53,18 +53,21 @@ The analysis is organized as a stepwise pipeline. Each SQL file represents a dis
 ### 4. Define Tolerability Events
 **File:** `04_define_tolerability_events.sql`
 
-- Defines adverse event–like signals (e.g., gastrointestinal events)
-- Establishes observation windows relative to exposure
-- Illustrates outcome construction in tolerability analyses
+- Defines post-exposure tolerability outcomes following colchicine initiation
+- Focuses on gastrointestinal adverse-event–like signals
+- Applies a fixed follow-up window relative to the index date
+- Produces participant-level outcome indicators for downstream analyses
+
 
 ---
 
 ### 5. Data Quality and Safety Checks
 **File:** `05_data_quality_and_safety_checks.sql`
 
-- Identifies missing or incomplete exposure data
-- Detects duplicate inflation due to joins
-- Validates temporal consistency of medications and events
+- Performs data quality checks to validate cohort stability
+- Identifies missing or duplicate participant records
+- Confirms completeness of DDI and tolerability indicators
+- Ensures correct temporal ordering between exposure and outcomes
 
 ---
 
