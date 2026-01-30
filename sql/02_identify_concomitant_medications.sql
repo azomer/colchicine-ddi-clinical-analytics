@@ -34,3 +34,7 @@ SELECT DISTINCT
     participant_id,
     medication_name
 FROM baseline_medications;
+
+
+-- Output shape:
+-- participant_id | medication_name
